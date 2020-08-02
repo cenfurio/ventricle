@@ -1,4 +1,4 @@
-import {Application, CORE_PROVIDERS, Injector, Provider, ReflectiveInjector, Type} from "@lib/core";
+import {Application, CORE_PROVIDERS, Injector, Provider, ReflectiveInjector, Type} from "@/core";
 
 export function bootstrapFromModule(moduleType: Type<any>, parentProviders: Provider[] = []) {
     const bootstrapInjector: Injector = ReflectiveInjector.resolveAndCreate([

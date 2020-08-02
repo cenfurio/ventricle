@@ -16,14 +16,14 @@ import {Reflector} from '@/core/util';
 import {EventDispatcher} from "./dispatcher";
 import {ModuleResolver} from "./module.resolver";
 import {ModuleProcessor} from "@/core/processors";
-import {Logger} from "@/util";
+import {GenericLogger} from "@/util";
 
 @Injectable()
 export class Application {
     // private providers: Provider[] = [];
     private injector!: Injector;
 
-    private readonly logger: ILogger = new Logger("Application");
+    private readonly logger: ILogger = new GenericLogger("Application");
 
     constructor(private bootstrapInjector: Injector) {
     }

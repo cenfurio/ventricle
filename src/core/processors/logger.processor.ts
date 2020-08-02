@@ -1,5 +1,5 @@
 import {IPropertyProcessor, Logger as LoggerAnnotation, Injectable} from "@/core/common";
-import { Logger } from '@/util';
+import { GenericLogger } from '@/util';
 
 @Injectable()
 export class LoggerAnnotationProcessor implements IPropertyProcessor<LoggerAnnotation> {
@@ -9,7 +9,7 @@ export class LoggerAnnotationProcessor implements IPropertyProcessor<LoggerAnnot
 
     process(instance: Object, propertyKey: string, annotation: LoggerAnnotation) {
         // TODO: Create LoggerService
-        instance[propertyKey] = new Logger(annotation.module);
+        instance[propertyKey] = new GenericLogger(annotation.module);
     }
 
 }

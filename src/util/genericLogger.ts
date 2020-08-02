@@ -3,8 +3,6 @@ import graylog from 'gelf-pro';
 import * as Sentry from '@sentry/node';
 import {Envuments} from "envuments";
 
-import * as pkg from '../../package.json';
-
 enum LoggerLevel {
     EMERGENCY,
     ALERT,
@@ -24,8 +22,8 @@ graylog.setConfig({
         port: Envuments.getNumber("GRAYLOG_PORT", 12201),
     },
     fields: {
-        facility: pkg.name,
-        version: pkg.version,
+        facility: "client", // TODO: Pkg data from somewhere
+        version: "v0.0.0", // TODO: Pkg data from somewhere
         build: 'xxxxxxxx', // TODO: Pkg data from somewhere
     },
 });
@@ -33,7 +31,7 @@ graylog.setConfig({
 if (Envuments.get('SENTRY_DSN')) {
     Sentry.init({
         dsn: Envuments.get('SENTRY_DSN'),
-        release: `${pkg.name}@${pkg.version}`
+        release: `v0.0.0` // TODO: Pkg data from somewhere
     });
 
     Sentry.configureScope(scope => {
@@ -41,7 +39,7 @@ if (Envuments.get('SENTRY_DSN')) {
     });
 }
 
-export class Logger {
+export class GenericLogger {
     constructor(private name: string) {}
 
     info(msg: any) {
