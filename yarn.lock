@@ -145,6 +145,18 @@ debug@4:
   dependencies:
     ms "^2.1.1"
 
+dotenv@^8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.2.0.tgz#97e619259ada750eea3e4ea3e26bceea5424b16a"
+  integrity sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
+
+envuments@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/envuments/-/envuments-1.0.10.tgz#c46343cdb8d0b8dea8acbe29a7a3d71dd9c7330b"
+  integrity sha512-Vl5PMcbjOTvZfhnquPbs2IdH9cA2qb97Uzh47mVr7fSWOSZP+F6HrWSHjco+mPtLZ1zhaZyqukQQwgq06yXePg==
+  dependencies:
+    dotenv "^8.2.0"
+
 gelf-pro@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/gelf-pro/-/gelf-pro-1.3.3.tgz#b4ee392a6c15ed9fe9122ee464cf40516e12843b"
