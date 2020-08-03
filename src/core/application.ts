@@ -9,14 +9,14 @@ import {
 import {
     ILogger,
     CoreEvents, IPropertyProcessor, PROPERTY_PROCESSORS
-} from '@/core/common';
-import {Reflector} from '@/core/util';
+} from './common';
+import {Reflector} from './util';
 
 
 import {EventDispatcher} from "./dispatcher";
 import {ModuleResolver} from "./module.resolver";
-import {ModuleProcessor} from "@/core/processors";
-import {GenericLogger} from "@/util";
+import {ModuleProcessor} from "./processors";
+import {GenericLogger} from "../util";
 
 @Injectable()
 export class Application {

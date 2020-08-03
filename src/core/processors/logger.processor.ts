@@ -1,5 +1,5 @@
-import {IPropertyProcessor, Logger as LoggerAnnotation, Injectable} from "@/core/common";
-import { GenericLogger } from '@/util';
+import {IPropertyProcessor, Logger as LoggerAnnotation, Injectable} from "../common";
+import { GenericLogger } from '../../util';
 
 @Injectable()
 export class LoggerAnnotationProcessor implements IPropertyProcessor<LoggerAnnotation> {

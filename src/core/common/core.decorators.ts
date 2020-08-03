@@ -1,5 +1,5 @@
 import {Provider, Type} from "injection-js";
-import {makeDecorator, makePropDecorator} from "@/core/util";
+import {makeDecorator, makePropDecorator} from "../util";
 
 export interface Module {
     providers?: Provider[];

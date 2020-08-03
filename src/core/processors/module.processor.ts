@@ -1,4 +1,4 @@
-import {MODULE_PROCESSORS, Type, Inject, Injectable, IModuleProcessor, Provider} from "@/core/common";
+import {MODULE_PROCESSORS, Type, Inject, Injectable, IModuleProcessor, Provider} from "../common";
 
 export class StubModuleProcessor implements IModuleProcessor {
     process(type: Type<any>, providers: Provider[]) {

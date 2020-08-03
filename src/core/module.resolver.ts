@@ -1,7 +1,7 @@
 import {Injectable, isType, Provider, Type} from "injection-js";
 
-import {Module} from "@/core/common";
-import {Reflector} from "@/core/util";
+import {Module} from "./common";
+import {Reflector} from "./util";
 
 export class TransitiveModule {
     private rootProviders = new Set<Provider>();

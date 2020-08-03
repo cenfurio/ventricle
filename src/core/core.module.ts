@@ -1,10 +1,10 @@
-import {Module, MODULE_PROCESSORS, ModuleWithProviders, PROPERTY_PROCESSORS} from "@/core/common";
+import {Module, MODULE_PROCESSORS, ModuleWithProviders, PROPERTY_PROCESSORS} from "./common";
 import {
     EventListenerProcessor,
     LoggerAnnotationProcessor,
     ModuleProcessor,
     StubModuleProcessor
-} from "@/core/processors";
+} from "./processors";
 
 @Module({
     providers: [

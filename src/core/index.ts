@@ -5,5 +5,6 @@ export { Module, ModuleWithProviders, EventListener, Env, Logger, ILogger, CoreE
 export { Application } from './application';
 export { EventDispatcher } from './dispatcher';
 export { CORE_PROVIDERS } from './providers';
+export { Reflector, makeDecorator, makeParamDecorator, makePropDecorator } from './util'
 
 export { CoreModule } from './core.module';

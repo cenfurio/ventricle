@@ -1,4 +1,4 @@
-import {EventDispatcher} from "@/core/dispatcher";
+import {EventDispatcher} from "../dispatcher";
 import {EventListener, IPropertyProcessor, Injectable} from "../common";
 
 @Injectable()
