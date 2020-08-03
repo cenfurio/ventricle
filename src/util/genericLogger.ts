@@ -1,7 +1,7 @@
 import chalk from "chalk";
 import graylog from 'gelf-pro';
 import * as Sentry from '@sentry/node';
-import {Envuments} from "envuments";
+// import {Envuments} from "envuments";
 
 enum LoggerLevel {
     EMERGENCY,
@@ -15,29 +15,29 @@ enum LoggerLevel {
     TRACE
 }
 
-graylog.setConfig({
-    adapterName: 'udp',
-    adapterOptions: {
-        host: Envuments.get("GRAYLOG_HOST", "127.0.0.1"),
-        port: Envuments.getNumber("GRAYLOG_PORT", 12201),
-    },
-    fields: {
-        facility: "client", // TODO: Pkg data from somewhere
-        version: "v0.0.0", // TODO: Pkg data from somewhere
-        build: 'xxxxxxxx', // TODO: Pkg data from somewhere
-    },
-});
-
-if (Envuments.get('SENTRY_DSN')) {
-    Sentry.init({
-        dsn: Envuments.get('SENTRY_DSN'),
-        release: `v0.0.0` // TODO: Pkg data from somewhere
-    });
-
-    Sentry.configureScope(scope => {
-        scope.setTag('build', 'xxxxxxxx'); // TODO: Pkg data from somewhere
-    });
-}
+// graylog.setConfig({
+//     adapterName: 'udp',
+//     adapterOptions: {
+//         host: Envuments.get("GRAYLOG_HOST", "127.0.0.1"),
+//         port: Envuments.getNumber("GRAYLOG_PORT", 12201),
+//     },
+//     fields: {
+//         facility: "client", // TODO: Pkg data from somewhere
+//         version: "v0.0.0", // TODO: Pkg data from somewhere
+//         build: 'xxxxxxxx', // TODO: Pkg data from somewhere
+//     },
+// });
+//
+// if (Envuments.get('SENTRY_DSN')) {
+//     Sentry.init({
+//         dsn: Envuments.get('SENTRY_DSN'),
+//         release: `v0.0.0` // TODO: Pkg data from somewhere
+//     });
+//
+//     Sentry.configureScope(scope => {
+//         scope.setTag('build', 'xxxxxxxx'); // TODO: Pkg data from somewhere
+//     });
+// }
 
 export class GenericLogger {
     constructor(private name: string) {}
