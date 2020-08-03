@@ -58,8 +58,10 @@ export class GenericLogger {
         this.gelf(LoggerLevel.WARNING, msg);
     }
 
-    error(msg: any) {
+    error(msg: any, meta: {[key: string]: any}) {
         console.log(chalk.red(`[${this.timestamp()}]`), chalk.red(`[ERROR] ${this.name} -`), chalk.dim(msg));
+
+        Sentry.setExtras(meta);
 
         const sentryEventId = Sentry.captureException(msg);
 

@@ -1,4 +1,4 @@
-export { Module, ModuleWithProviders, EventListener, Env, Logger, ILogger, CoreEvents, TypeMetadata, Injector,
+export { Module, ModuleWithProviders, EventListener, Env, Envuments, Logger, ILogger, CoreEvents, TypeMetadata, Injector,
     Provider, Injectable, Type, Inject, Optional, IModuleProcessor, ReflectiveInjector, IPropertyProcessor, InjectionToken,
     MODULE_PROCESSORS, PROPERTY_PROCESSORS } from './common';
 
