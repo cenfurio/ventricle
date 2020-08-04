@@ -1,13 +1,21 @@
 {
-  "name": "kratos",
-  "version": "1.0.0",
+  "name": "@kratosgg/framework",
+  "version": "0.0.0",
   "description": "DI Powered framework used by the Client to build the discord bot. Can be used for other things ie an API.",
-  "repository": "git@gitlab.com:KratosGG/framework.git",
+  "repository": "git@gitlab.com:kratosgg/framework.git",
   "author": "Kratos Dev team",
   "license": "MIT",
-  "private": true,
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "prepublishOnly": "tsc"
+  },
+  "publishConfig": {
+    "@kratosgg:registry":"https://gitlab.com/api/v4/projects/20298453/packages/npm/"
+  },
   "dependencies": {
     "@sentry/node": "^5.20.1",
     "chalk": "^4.1.0",
