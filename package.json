@@ -11,7 +11,7 @@
     "build"
   ],
   "scripts": {
-    "prepublishOnly": "tsc"
+    "build": "tsc"
   },
   "publishConfig": {
     "@kratosgg:registry":"https://gitlab.com/api/v4/projects/20298453/packages/npm/"
