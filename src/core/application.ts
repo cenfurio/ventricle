@@ -16,17 +16,16 @@ import {Reflector} from './util';
 import {EventDispatcher} from "./dispatcher";
 import {ModuleResolver} from "./module.resolver";
 import {ModuleProcessor} from "./processors";
-import {GenericLogger} from "../util";
+import {Logger} from "../util";
 
 @Injectable()
 export class Application {
     // private providers: Provider[] = [];
     private injector!: Injector;
 
-    private readonly logger: ILogger = new GenericLogger("Application");
+    private readonly logger: ILogger = new Logger("Application");
 
-    constructor(private bootstrapInjector: Injector) {
-    }
+    constructor(private bootstrapInjector: Injector) {}
 
     async bootstrapModule(type: Type<any>): Promise<Injector> {
         if (!this.injector) this.injector = await this.doBootstrap(type);
@@ -66,7 +65,7 @@ export class Application {
 
         const propertyProcessors = moduleInjector.get(PROPERTY_PROCESSORS);
 
-        this.logger.info(`Initializing ${resolvedProviders.length} providers`);
+        this.logger.log(`Initializing ${resolvedProviders.length} providers`);
         resolvedProviders.forEach(resolvedProvider => {
             const service = moduleInjector.get(resolvedProvider.key.token);
             this.processProviderProperties(propertyProcessors, service);

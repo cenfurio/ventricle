@@ -1,4 +1,3 @@
-export { Env, Envuments } from 'envuments';
 export { Inject, Optional, Type, Injectable, Provider, Injector, ReflectiveInjector, InjectionToken } from 'injection-js';
 
 export * from './core.constants';
