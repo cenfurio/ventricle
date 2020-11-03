@@ -19,10 +19,11 @@ export interface EventListener {
     priority: number;
 }
 
-export const EventListener = makePropDecorator('EventListener', (eventName: string, priority?: number) => ({eventName, priority}));
+export const EventListener = makePropDecorator('EventListener', (eventName: string, priority?: number) => ({ eventName, priority }));
 
-export interface Logger {
+export interface Log {
     module: string;
+    id?: string
 }
 
-export const Logger = makePropDecorator('Logger', (module: string) => ({module}));
+export const Log = makePropDecorator('Logger', (module: string, id?: string) => ({ module, id }));

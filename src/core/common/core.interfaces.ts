@@ -1,13 +1,10 @@
 import {Provider, Type} from "injection-js";
 
 export interface ILogger {
-    info(msg: string, ...args: any[]);
-    warn(msg: string, ...args: any[]);
-    debug(msg: string, ...args: any[]);
-    error(msg: string, ...args: any[]);
-
-    // TODO: Look for other args needed
-    // sentry(msg: string, ...args: any[]);
+    log(message: string, ...args: any[]);
+    warn(message: string, ...args: any[]);
+    debug(message: string, ...args: any[]);
+    error(message: string, ...args: any[]);
 }
 
 export interface TypeMetadata {
