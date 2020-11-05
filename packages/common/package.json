@@ -1,7 +1,7 @@
 {
   "name": "@ventricle/common",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "repository": {
     "type": "git",
@@ -21,6 +21,9 @@
   "files": [
     "build"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
@@ -33,5 +36,6 @@
   },
   "devDependencies": {
     "typescript": "~4.0.0"
-  }
+  },
+  "gitHead": "a89aeab9b812b468ddfd86b6b8a697a1191b5d73"
 }

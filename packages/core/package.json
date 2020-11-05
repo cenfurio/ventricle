@@ -1,7 +1,7 @@
 {
   "name": "@ventricle/core",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [],
   "repository": {
     "type": "git",
@@ -21,17 +21,21 @@
   "files": [
     "build"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "yarn run build",
     "clear": "rimraf -rf ./build"
   },
   "dependencies": {
-    "@ventricle/common": "^0.0.1",
+    "@ventricle/common": "^0.0.2",
     "injection-js": "^2.3.2",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
     "typescript": "~4.0.0"
-  }
+  },
+  "gitHead": "a89aeab9b812b468ddfd86b6b8a697a1191b5d73"
 }
