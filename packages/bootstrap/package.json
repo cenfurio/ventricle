@@ -1,7 +1,7 @@
 {
   "name": "@ventricle/bootstrap",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [],
   "repository": {
     "type": "git",
@@ -27,8 +27,8 @@
     "clear": "rimraf -rf ./build"
   },
   "dependencies": {
-    "@ventricle/common": "^0.0.0",
-    "@ventricle/core": "^0.0.0"
+    "@ventricle/common": "^0.0.1",
+    "@ventricle/core": "^0.0.1"
   },
   "devDependencies": {
     "typescript": "~4.0.0"

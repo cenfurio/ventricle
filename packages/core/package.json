@@ -1,7 +1,7 @@
 {
   "name": "@ventricle/core",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [],
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "clear": "rimraf -rf ./build"
   },
   "dependencies": {
-    "@ventricle/common": "^0.0.0",
+    "@ventricle/common": "^0.0.1",
     "injection-js": "^2.3.2",
     "reflect-metadata": "^0.1.13"
   },
