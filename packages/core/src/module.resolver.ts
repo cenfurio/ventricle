@@ -1,4 +1,4 @@
-import {Injectable, isType, Provider, Type, Module} from "@ventricle/common";
+import {Injectable, isType, Provider, Type, Module, ModuleMetadata} from "@ventricle/common";
 
 import {Reflector} from "./util";
 
@@ -45,7 +45,7 @@ export class ModuleResolver {
             throw new Error(`${type.name} is missing the @Module annotation`);
         }
 
-        const annotation = Reflector.getAnnotation(type, Module)!;
+        const annotation = Reflector.getAnnotation<ModuleMetadata>(type, Module)!;
 
         // const metadata: ModuleMetadata = {
         //     type,

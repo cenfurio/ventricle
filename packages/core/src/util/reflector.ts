@@ -147,7 +147,7 @@ export class Reflector {
      * @param type The type
      * @param annotation The annotation
      */
-    static getAnnotation<T>(type: Type<any>, annotation: Type<T>): T | undefined {
+    static getAnnotation<T = any>(type: Type<any>, annotation: Type<T>): T | undefined {
         const annotations = this.annotations(type);
 
         return annotations.find(a => a instanceof annotation);
