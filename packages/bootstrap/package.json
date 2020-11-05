@@ -1,0 +1,36 @@
+{
+  "name": "@ventricle/bootstrap",
+  "description": "",
+  "version": "0.0.0",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cenfurio/ventricle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cenfurio/ventricle/issues"
+  },
+  "homepage": "https://github.com/cenfurio/ventricle#readme",
+  "contributors": [
+    "Mason Rogers <mason@viction.dev>",
+    "Paul Hobbel <paulhobbel@hotmail.com>"
+  ],
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build.index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "clear": "rimraf -rf ./build"
+  },
+  "dependencies": {
+    "@ventricle/common": "^0.0.0",
+    "@ventricle/core": "^0.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~4.0.0"
+  }
+}

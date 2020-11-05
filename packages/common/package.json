@@ -1,0 +1,37 @@
+{
+  "name": "@ventricle/common",
+  "description": "",
+  "version": "0.0.0",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cenfurio/ventricle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cenfurio/ventricle/issues"
+  },
+  "homepage": "https://github.com/cenfurio/ventricle#readme",
+  "contributors": [
+    "Mason Rogers <mason@viction.dev>",
+    "Paul Hobbel <paulhobbel@hotmail.com>"
+  ],
+  "license": "MIT",
+  "main": "build/index.js",
+  "types": "build.index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "yarn run build",
+    "clear": "rimraf -rf ./build"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "injection-js": "^2.3.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "typescript": "~4.0.0"
+  }
+}
