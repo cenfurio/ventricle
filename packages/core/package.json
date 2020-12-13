@@ -32,7 +32,8 @@
   "dependencies": {
     "@ventricle/common": "^0.0.2",
     "injection-js": "^2.3.2",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.0.3"
   },
   "devDependencies": {
     "typescript": "~4.0.0"

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2016",
+    "outDir": "./build",
+    "baseUrl": ".",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"]
+}
