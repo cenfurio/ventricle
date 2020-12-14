@@ -7,9 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Build and Deploy
-        uses: testthedocs/github-pages-deploy-action@master
+      name: Deploy docs
+        uses: jenkey2011/vuepress-deploy@master
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BUILD_SCRIPT: npm install && npm run-script vuepress:build
-          BUILD_DIR: docs/.vuepress/dist
+          ACCESS_TOKEN: ${{ secrets.PAT }}
+          TARGET_REPO: kratosgg/ventricle
+          TARGET_BRANCH: gh-pages
+          BUILD_SCRIPT: yarn && yarn vuepress:build
+          BUILD_DIR: docs/.vuepress/dist/
