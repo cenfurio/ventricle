@@ -5,13 +5,19 @@
   "scripts": {
     "build": "lerna run build",
     "publish": "lerna publish",
-    "clear": "lerna run clear"
+    "clear": "lerna run clear",
+    "vuepress:build": "vuepress build docs",
+    "vuepress:serve": "vuepress dev docs"
   },
   "devDependencies": {
     "@types/node": "^14.14.6",
     "lerna": "^3.22.1",
     "rimraf": "^3.0.2",
-    "typescript": "~4.0.0"
+    "typedoc": "^0.19.2",
+    "typedoc-plugin-markdown": "^3.1.1",
+    "typescript": "~4.0.0",
+    "vuepress": "^1.5.3",
+    "vuepress-plugin-typedoc": "^0.1.1"
   },
   "workspaces": [
     "packages/*",
